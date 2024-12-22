@@ -1,4 +1,4 @@
-const renderMEal = (meal = {}) => {
+const renderMeal = (meal = {}) => {
   const { strMeal, strMealThumb, strInstructions, strCategory, strArea } = meal;
 
   const getIngredientsValue = (meal) => {
@@ -45,6 +45,6 @@ const renderMEal = (meal = {}) => {
 };
 
 axios.get("https://www.themealdb.com/api/json/v1/1/random.php").then((res) => {
-  renderMEal(res.data.meals[0]);
+  renderMeal(res.data.meals[0]);
   console.log(res.data.meals[0]);
 });
